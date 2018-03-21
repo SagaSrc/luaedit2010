@@ -27,3 +27,5 @@
 /Apps/Utilities/Rpc/obj
 /Apps/DAL/DocumentFactory/obj
 /Apps/.vs
+/Apps/Utilities/Rpc/RemoteDebugger/Release
+/Apps/Utilities/Rpc/RemoteDebugger/Debug
