@@ -1,0 +1,5 @@
+<DocumentTemplateDef AssociatedExtension=".lua" SuggestiveName="Script">
+  <TemplateType>Item</TemplateType>
+  <TemplateName>Lua Script</TemplateName>
+  <TemplateDescription>A blank Lua script file</TemplateDescription>
+</DocumentTemplateDef>

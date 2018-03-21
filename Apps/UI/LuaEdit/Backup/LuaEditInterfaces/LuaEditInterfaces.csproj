@@ -1,0 +1,86 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F357673-5041-467C-B97B-824AE4035542}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LuaEdit.Interfaces</RootNamespace>
+    <AssemblyName>LuaEditInterfaces</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IDocumentNode.cs" />
+    <Compile Include="IDocumentRef.cs" />
+    <Compile Include="ILuaEditDocumentEditable.cs" />
+    <Compile Include="ILuaEditDocument.cs" />
+    <Compile Include="ILuaEditDocumentEditableUI.cs" />
+    <Compile Include="ILuaEditDocumentGroup.cs" />
+    <Compile Include="ILuaEditDocumentProject.cs" />
+    <Compile Include="ILuaEditDocumentProjectFolder.cs" />
+    <Compile Include="ILuaEditDocumentUI.cs" />
+    <Compile Include="ILuaEditDocumentUndoRedo.cs" />
+    <Compile Include="ILuaEditProjectProperties.cs" />
+    <Compile Include="ILuaEditDocumentSolution.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\LuaEditUtils\LuaEditUtils.csproj">
+      <Project>{EA8683D3-A5EF-44CB-B370-ACE8960A1BF7}</Project>
+      <Name>LuaEditUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Components\DockPanel\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Components\Fireball\Fireball.CodeEditor\Fireball.CodeEditor\Fireball.CodeEditor.csproj">
+      <Project>{94BFA44A-F4D0-4605-88E6-3ADD498F5E16}</Project>
+      <Name>Fireball.CodeEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Components\Fireball\Fireball.SyntaxDocument\Fireball.SyntaxDocument.csproj">
+      <Project>{3F43BAB0-22B4-4FD6-9655-8BA214A093A5}</Project>
+      <Name>Fireball.SyntaxDocument</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Components\Fireball\Fireball.Windows.Forms\Fireball.Windows.Forms.csproj">
+      <Project>{0E253078-0AFA-4B69-B27A-001B96735D60}</Project>
+      <Name>Fireball.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Components\TreeListView\DotNetLib.Controls.csproj">
+      <Project>{BBD77471-F50D-4CFB-8C9C-0F84B31C62F2}</Project>
+      <Name>DotNetLib.Controls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

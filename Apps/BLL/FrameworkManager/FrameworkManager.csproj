@@ -1,0 +1,207 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CFA58506-139F-4DC2-A35C-EF0F3E3A84B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LuaEdit</RootNamespace>
+    <AssemblyName>FrameworkManager</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetLib.Controls, Version=0.1.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>D:\Repos\LuaEdit2010Source\Apps\packages\DotNetLib.Controls.0.1.2.3\lib\net20\DotNetLib.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>D:\Repos\LuaEdit2010Source\Apps\packages\Fireball.2.0.0.1\lib\net20\Fireball.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>D:\Repos\LuaEdit2010Source\Apps\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrameworkManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\BookmarkDisabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BookmarkEnabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakpointDisabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakpointEnabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Build.bmp" />
+    <None Include="Resources\LuaSolution_16x16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuaProject_16x16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuaScript_16x16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExistingItem.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewItem.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenItem.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LargeIconsListing.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SmallIconsListing.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuaSolution_32x32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuaProject_32x32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lua.syn" />
+    <None Include="Resources\LuaScript_32x32.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LineBreakMarker.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DAL\DocumentFactory\DocumentFactory.csproj">
+      <Project>{7cd5d955-9096-4e82-9465-7827e427ab4e}</Project>
+      <Name>DocumentFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DAL\LuaEditInterfaces\LuaEditInterfaces.csproj">
+      <Project>{0b169010-a945-465e-ba31-cc50f58e5309}</Project>
+      <Name>LuaEditInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\LuaEditWin32\LuaEditWin32.csproj">
+      <Project>{99e82efe-83f9-421e-880b-ae94d54bb44c}</Project>
+      <Name>LuaEditWin32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Drawing\Shapes\ToDoList.txt" />
+    <Content Include="Docking\Controls\CodeDoc\InertButton.xml" />
+    <Content Include="Docking\Docking\CodeDoc\AutoHidePane.xml" />
+    <Content Include="Docking\Docking\CodeDoc\AutoHidePaneCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\AutoHideStripBase.xml" />
+    <Content Include="Docking\Docking\CodeDoc\AutoHideStripVS2003.xml" />
+    <Content Include="Docking\Docking\CodeDoc\AutoHideTab.xml" />
+    <Content Include="Docking\Docking\CodeDoc\AutoHideTabCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DisplayingDockList.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockContent.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockContentCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockContentHandler.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockList.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPane.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneCaptionBase.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneCaptionVS2003.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPanel.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPanelExtender.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneStripBase.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneStripVS2003.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneTab.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneTabCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockWindow.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockWindowCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\Enums.xml" />
+    <Content Include="Docking\Docking\CodeDoc\EventArgs.xml" />
+    <Content Include="Docking\Docking\CodeDoc\FloatWindow.xml" />
+    <Content Include="Docking\Docking\CodeDoc\FloatWindowCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\Interfaces.xml" />
+    <Content Include="Docking\Docking\CodeDoc\NestedDockingStatus.xml" />
+    <Content Include="DotNetLib.Windows.Forms.xml" />
+    <Content Include="Resources\listview.bmp" />
+    <Content Include="Resources\treeview.bmp" />
+    <Content Include="Resources\tv_minus.bmp" />
+    <Content Include="Resources\tv_plus.bmp" />
+    <Content Include="WindowsForms\Resources\show_fever.png" />
+    <Content Include="WindowsForms\Resources\show_more.png" />
+    <Content Include="WindowsForms\Windows\Forms\DiscoverControl.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

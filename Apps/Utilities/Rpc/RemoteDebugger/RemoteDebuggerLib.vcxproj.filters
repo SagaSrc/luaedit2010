@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Network">
+      <UniqueIdentifier>{d47a6365-8356-4d80-9ce5-0d9df6eec52b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rpc">
+      <UniqueIdentifier>{42a9c08c-b92e-452a-8f4c-64506792fb2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rpc\Debugging">
+      <UniqueIdentifier>{560bb9c4-9bbe-4010-9a20-4d5abe562a52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rpc\Debugging\DebugManager">
+      <UniqueIdentifier>{e3b4a584-4125-4115-892f-5d0656ef97b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Events">
+      <UniqueIdentifier>{0fbaa116-1b0e-4c14-a258-348d8da4e1a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{b03a9f1e-1666-46e3-98dd-eca165da672f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Network\TcpSocket.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\RpcServer.cpp">
+      <Filter>Rpc</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\BreakAtLine.cpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\DebugActionCmd.cpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\LuaError.cpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\LuaOutput.cpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\RpcCommand.cpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\RunScriptInVM.cpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\RunToLineCmd.cpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\SetLuaVariable.cpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\UnBreakAtLine.cpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\UpdateBreakpoints.cpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\UpdateDebugInfo.cpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\UpdateTableDetails.cpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\DebugManager\Breakpoint.cpp">
+      <Filter>Rpc\Debugging\DebugManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\DebugManager\CallStack.cpp">
+      <Filter>Rpc\Debugging\DebugManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\DebugManager\DebugInfo.cpp">
+      <Filter>Rpc\Debugging\DebugManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\DebugManager\DebugManager.cpp">
+      <Filter>Rpc\Debugging\DebugManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\DebugManager\LuaThread.cpp">
+      <Filter>Rpc\Debugging\DebugManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Rpc\Debugging\DebugManager\LuaVariable.cpp">
+      <Filter>Rpc\Debugging\DebugManager</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteDebugger.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Network\TcpSocket.hpp">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\RpcServer.hpp">
+      <Filter>Rpc</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\BreakAtLine.hpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\DebugActionCmd.hpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\LuaError.hpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\LuaOutput.hpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\RpcCommand.hpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\RunScriptInVM.hpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\RunToLineCmd.hpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\SetLuaVariable.hpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\UnBreakAtLine.hpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\UpdateBreakpoints.hpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\UpdateDebugInfo.hpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\UpdateTableDetails.hpp">
+      <Filter>Rpc\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\DebugManager\Breakpoint.hpp">
+      <Filter>Rpc\Debugging\DebugManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\DebugManager\CallStack.hpp">
+      <Filter>Rpc\Debugging\DebugManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\DebugManager\DebugInfo.hpp">
+      <Filter>Rpc\Debugging\DebugManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\DebugManager\DebugManager.hpp">
+      <Filter>Rpc\Debugging\DebugManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\DebugManager\LuaThread.hpp">
+      <Filter>Rpc\Debugging\DebugManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Rpc\Debugging\DebugManager\LuaVariable.hpp">
+      <Filter>Rpc\Debugging\DebugManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Events\Events.hpp">
+      <Filter>Events</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RemoteDebugger.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+</Project>

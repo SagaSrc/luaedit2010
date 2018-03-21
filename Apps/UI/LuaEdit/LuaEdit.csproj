@@ -1,0 +1,499 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D479CF5-C7DF-4CE9-B65C-00ECF57DA9B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LuaEdit</RootNamespace>
+    <AssemblyName>LuaEdit</AssemblyName>
+    <ApplicationIcon>LuaEditLogo_32x32.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetLib.Controls, Version=0.1.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>D:\Repos\LuaEdit2010Source\Apps\packages\DotNetLib.Controls.0.1.2.3\lib\net20\DotNetLib.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Fireball, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>D:\Repos\LuaEdit2010Source\Apps\packages\Fireball.2.0.0.1\lib\net20\Fireball.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>D:\Repos\LuaEdit2010Source\Apps\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.1.6643.41644, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>D:\Repos\LuaEdit2010Source\Apps\packages\WeifenLuo.WinFormsUI.Docking.2.1.0\lib\net20\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutScreen.Designer.cs">
+      <DependentUpon>AboutScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\BreakpointsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BreakpointsDlg.Designer.cs">
+      <DependentUpon>BreakpointsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CallStackDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CallStackDlg.Designer.cs">
+      <DependentUpon>CallStackDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CoroutinesDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CoroutinesDlg.Designer.cs">
+      <DependentUpon>CoroutinesDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DocumentListDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DocumentListDlg.Designer.cs">
+      <DependentUpon>DocumentListDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FindAndReplace\FindInFilesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FindAndReplace\FindInFilesControl.Designer.cs">
+      <DependentUpon>FindInFilesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FindAndReplace\FindAndReplaceDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FindAndReplace\FindAndReplaceDlg.Designer.cs">
+      <DependentUpon>FindAndReplaceDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\LocalsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\LocalsDlg.Designer.cs">
+      <DependentUpon>LocalsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\OutputDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\OutputDlg.Designer.cs">
+      <DependentUpon>OutputDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FindAndReplace\QuickFindControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FindAndReplace\QuickFindControl.Designer.cs">
+      <DependentUpon>QuickFindControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SolutionExplorerDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SolutionExplorerDlg.Designer.cs">
+      <DependentUpon>SolutionExplorerDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\BreakpointsDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BreakpointsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CallStackDlg.resx">
+      <DependentUpon>CallStackDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CoroutinesDlg.resx">
+      <DependentUpon>CoroutinesDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DocumentListDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DocumentListDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FindAndReplace\FindInFilesControl.resx">
+      <DependentUpon>FindInFilesControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FindAndReplace\FindAndReplaceDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FindAndReplaceDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LocalsDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LocalsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\OutputDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OutputDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FindAndReplace\QuickFindControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QuickFindControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SolutionExplorerDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SolutionExplorerDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BLL\FrameworkManager\FrameworkManager.csproj">
+      <Project>{cfa58506-139f-4dc2-a35c-ef0f3e3a84b7}</Project>
+      <Name>FrameworkManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BLL\RemoteDebug\LuaEditDebugger.csproj">
+      <Project>{280e9101-1627-46b1-a26a-0b09b2933163}</Project>
+      <Name>LuaEditDebugger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Components\LuaInterface\LuaInterface.csproj">
+      <Project>{d05fde17-9cbc-4464-8f20-bb6bcbd93ab4}</Project>
+      <Name>LuaInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DAL\DocumentFactory\DocumentFactory.csproj">
+      <Project>{7cd5d955-9096-4e82-9465-7827e427ab4e}</Project>
+      <Name>DocumentFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DAL\LuaEditDocuments\LuaEditDocuments.csproj">
+      <Project>{7d7fe0d5-7441-4a60-a75a-41cf368cb16c}</Project>
+      <Name>LuaEditDocuments</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DAL\LuaEditInterfaces\LuaEditInterfaces.csproj">
+      <Project>{0b169010-a945-465e-ba31-cc50f58e5309}</Project>
+      <Name>LuaEditInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\LuaEditWin32\LuaEditWin32.csproj">
+      <Project>{99e82efe-83f9-421e-880b-ae94d54bb44c}</Project>
+      <Name>LuaEditWin32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\Rpc\Rpc.csproj">
+      <Project>{5a7eca66-e2d3-43a1-8c88-074dae417edb}</Project>
+      <Name>Rpc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LuaEditControls\LuaEditControls.csproj">
+      <Project>{cfdd6abf-286f-454d-93c4-95c08143e4ea}</Project>
+      <Name>LuaEditControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAll.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakpointEnabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakpointDisabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BookmarkEnabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BookmarkDisabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PreviousBookmark.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClearBookmarks.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DisableAllBookmarks.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnableBookmark.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NextBookmark.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SolutionExplorer.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SolutionExplorerProperties.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProjectFolderOpened.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProjectFolderClosed.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenItem.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenProject.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenFile.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartDebugging.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakpointsWindow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StepOver.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteAllBreakpoints.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DisableAllBreakpoints.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StepInto.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToSourceCode.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LocalsWindow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CallStack.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StepOut.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopDebugging.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakAll.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReplaceInFiles.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindInFiles.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repalce.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightArrow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Output.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToggleWordWrap.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClearOutput.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreadsWindow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RunToCursor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertBreakpoint.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakpointConditionedEnabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakpointConditionedDisabled.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewItem.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExistingItem.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewProjectFolder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewSolutionFolder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentList.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Drawing\Shapes\ToDoList.txt" />
+    <Content Include="Docking\Controls\CodeDoc\InertButton.xml" />
+    <Content Include="Docking\Docking\CodeDoc\AutoHidePane.xml" />
+    <Content Include="Docking\Docking\CodeDoc\AutoHidePaneCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\AutoHideStripBase.xml" />
+    <Content Include="Docking\Docking\CodeDoc\AutoHideStripVS2003.xml" />
+    <Content Include="Docking\Docking\CodeDoc\AutoHideTab.xml" />
+    <Content Include="Docking\Docking\CodeDoc\AutoHideTabCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DisplayingDockList.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockContent.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockContentCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockContentHandler.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockList.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPane.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneCaptionBase.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneCaptionVS2003.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPanel.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPanelExtender.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneStripBase.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneStripVS2003.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneTab.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockPaneTabCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockWindow.xml" />
+    <Content Include="Docking\Docking\CodeDoc\DockWindowCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\Enums.xml" />
+    <Content Include="Docking\Docking\CodeDoc\EventArgs.xml" />
+    <Content Include="Docking\Docking\CodeDoc\FloatWindow.xml" />
+    <Content Include="Docking\Docking\CodeDoc\FloatWindowCollection.xml" />
+    <Content Include="Docking\Docking\CodeDoc\Interfaces.xml" />
+    <Content Include="Docking\Docking\CodeDoc\NestedDockingStatus.xml" />
+    <Content Include="DotNetLib.Windows.Forms.xml" />
+    <Content Include="LuaEditLogo_32x32.ico" />
+    <Content Include="Resources\listview.bmp" />
+    <Content Include="Resources\treeview.bmp" />
+    <Content Include="Resources\tv_minus.bmp" />
+    <Content Include="Resources\tv_plus.bmp" />
+    <Content Include="WindowsForms\Resources\show_fever.png" />
+    <Content Include="WindowsForms\Resources\show_more.png" />
+    <Content Include="WindowsForms\Windows\Forms\DiscoverControl.bmp" />
+    <None Include="Resources\CheckSyntax.bmp" />
+    <None Include="Resources\CloseSolution.bmp" />
+    <None Include="Resources\NewFile.bmp" />
+    <None Include="Resources\NewProject.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>xcopy "..\..\..\Data\Templates\*.*" "$(OutDir)\Templates\*.*" /Y /E
+xcopy "..\..\..\Data\Samples\*.*" "$(OutDir)\Samples\*.*" /Y /E
+xcopy "..\..\..\Data\License\*.*" "$(OutDir)\License\*.*" /Y /E
+xcopy "$(ProjectDir)\SyntaxFiles\*.*" "$(OutDir)\SyntaxFiles\*.*" /Y /E</PostBuildEvent>
+  </PropertyGroup>
+</Project>

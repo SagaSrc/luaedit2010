@@ -1,0 +1,161 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CFDD6ABF-286F-454D-93C4-95C08143E4EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LuaEdit.Controls</RootNamespace>
+    <AssemblyName>LuaEditControls</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetLib.Controls, Version=0.1.2.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>D:\Repos\LuaEdit2010Source\Apps\packages\DotNetLib.Controls.0.1.2.3\lib\net20\DotNetLib.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExpressionBuilderContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpressionBuilderContextMenu.Designer.cs">
+      <DependentUpon>ExpressionBuilderContextMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LuaEditBorderPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LuaEditBorderPanel.Designer.cs">
+      <DependentUpon>LuaEditBorderPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LuaEditFolderSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LuaEditFolderSelector.Designer.cs">
+      <DependentUpon>LuaEditFolderSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LuaEditHeaderSeparator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LuaEditHeaderSeparator.Designer.cs">
+      <DependentUpon>LuaEditHeaderSeparator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LuaEditListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LuaEditPageControlPage.cs">
+    </Compile>
+    <Compile Include="LuaEditPageButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LuaEditPageButton.Designer.cs">
+      <DependentUpon>LuaEditPageButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LuaEditPageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LuaEditPageControl.Designer.cs">
+      <DependentUpon>LuaEditPageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LuaEditTreeListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemIconManager.cs" />
+    <Compile Include="ToolStripRenderers.cs" />
+    <Compile Include="LuaEditGradientPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LuaEditGradientPanel.Designer.cs">
+      <DependentUpon>LuaEditGradientPanel.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BLL\FrameworkManager\FrameworkManager.csproj">
+      <Project>{cfa58506-139f-4dc2-a35c-ef0f3e3a84b7}</Project>
+      <Name>FrameworkManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\LuaEditWin32\LuaEditWin32.csproj">
+      <Project>{99e82efe-83f9-421e-880b-ae94d54bb44c}</Project>
+      <Name>LuaEditWin32</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LuaEditBorderPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LuaEditBorderPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuaEditFolderSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LuaEditFolderSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuaEditHeaderSeparator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LuaEditHeaderSeparator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuaEditPageButton.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LuaEditPageButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuaEditPageControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LuaEditPageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DotNetLib.Windows.Forms.xml" />
+    <Content Include="Resources\listview.bmp" />
+    <Content Include="Resources\treeview.bmp" />
+    <Content Include="Resources\tv_minus.bmp" />
+    <Content Include="Resources\tv_plus.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

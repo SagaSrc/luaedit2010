@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlLuaProjectDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <DocumentRef FileName=".\ExternalProgramDebug.lua" />
+    <DocumentRef FileName=".\ReadMe.txt" />
+  </Documents>
+  <DocumentGroups />
+  <DocumentFolders />
+  <ProjectProperties>
+    <StartAction>StartExternalProgram</StartAction>
+    <ExternalProgram>..\..\Remote Debug\lua_rdbg\Release\lua_rdbg.exe</ExternalProgram>
+    <CmdLineArgs>-p911</CmdLineArgs>
+    <RemotePort>911</RemotePort>
+    <StartupFileName />
+    <WorkingDir />
+    <UseRemoteMachine>false</UseRemoteMachine>
+    <RemoteMachineName />
+    <BuildOutputDir />
+    <PreBuildEventCmdLine />
+    <PostBuildEventCmdLine />
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </ProjectProperties>
+</XmlLuaProjectDocument>

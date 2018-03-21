@@ -1,0 +1,10 @@
+<DocumentTemplateDef AssociatedExtension=".luaproj" SuggestiveName="&lt;Enter_name&gt;">
+  <TemplateType>ItemGroup</TemplateType>
+  <TemplateName>Lua Project</TemplateName>
+  <TemplateDescription>A blank Lua script file</TemplateDescription>
+  <TemplateFileName>./ItemGroups/LuaProject.zip</TemplateFileName>
+  <TemplateContent>
+    <TemplateContentItem NeedRename="true">Project1.luaproj</TemplateContentItem>
+    <TemplateContentItem>Script1.lua</TemplateContentItem>
+  </TemplateContent>
+</DocumentTemplateDef>

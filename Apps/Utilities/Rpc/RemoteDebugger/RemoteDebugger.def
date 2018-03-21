@@ -1,0 +1,7 @@
+LIBRARY		"rdbg"
+
+EXPORTS		StartLuaEditRemoteDebugger
+			StopLuaEditRemoteDebugger
+			GetCurrentLuaVersion
+			CheckLuaScriptSyntax
+

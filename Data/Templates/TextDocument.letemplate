@@ -1,0 +1,5 @@
+<DocumentTemplateDef AssociatedExtension=".txt" SuggestiveName="Text">
+  <TemplateType>Item</TemplateType>
+  <TemplateName>Text Document</TemplateName>
+  <TemplateDescription>A blank text file</TemplateDescription>
+</DocumentTemplateDef>

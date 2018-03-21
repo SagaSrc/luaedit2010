@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{136921E7-A856-4522-8F2C-A04238A5225F}</ProjectGuid>
+    <RootNamespace>RpcServer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27413.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)\lib\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)\lib\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\Application;..\..\..\Components\boost_1_35_0;..\..\..\Components\Lua\lua\src;..\..\..\Components\Lua\lua\etc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>Ws2_32.lib;lua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)rdbgd.lib</OutputFile>
+      <AdditionalLibraryDirectories>C:\Prog\CSharp\LuaEdit\bin\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile />
+    </Lib>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\Application;..\..\..\Components\boost_1_35_0;..\..\..\Components\Lua\lua\src;..\..\..\Components\Lua\lua\etc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>Ws2_32.lib;lua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)rdbg.lib</OutputFile>
+      <AdditionalLibraryDirectories>C:\Prog\CSharp\LuaEdit\bin\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile />
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Lib>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Network\TcpSocket.cpp" />
+    <ClCompile Include="RemoteDebugger.cpp" />
+    <ClCompile Include="Rpc\Debugging\BreakAtLine.cpp" />
+    <ClCompile Include="Rpc\Debugging\DebugActionCmd.cpp" />
+    <ClCompile Include="Rpc\Debugging\DebugManager\Breakpoint.cpp" />
+    <ClCompile Include="Rpc\Debugging\DebugManager\CallStack.cpp" />
+    <ClCompile Include="Rpc\Debugging\DebugManager\DebugInfo.cpp" />
+    <ClCompile Include="Rpc\Debugging\DebugManager\DebugManager.cpp" />
+    <ClCompile Include="Rpc\Debugging\DebugManager\LuaThread.cpp" />
+    <ClCompile Include="Rpc\Debugging\DebugManager\LuaVariable.cpp" />
+    <ClCompile Include="Rpc\Debugging\LuaError.cpp" />
+    <ClCompile Include="Rpc\Debugging\LuaOutput.cpp" />
+    <ClCompile Include="Rpc\Debugging\RpcCommand.cpp" />
+    <ClCompile Include="Rpc\Debugging\RunScriptInVM.cpp" />
+    <ClCompile Include="Rpc\Debugging\RunToLineCmd.cpp" />
+    <ClCompile Include="Rpc\Debugging\SetLuaVariable.cpp" />
+    <ClCompile Include="Rpc\Debugging\UnBreakAtLine.cpp" />
+    <ClCompile Include="Rpc\Debugging\UpdateBreakpoints.cpp" />
+    <ClCompile Include="Rpc\Debugging\UpdateDebugInfo.cpp" />
+    <ClCompile Include="Rpc\Debugging\UpdateTableDetails.cpp" />
+    <ClCompile Include="Rpc\RpcServer.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Events\Events.hpp" />
+    <ClInclude Include="include\RemoteDebugger.hpp" />
+    <ClInclude Include="Network\TcpSocket.hpp" />
+    <ClInclude Include="Rpc\Debugging\BreakAtLine.hpp" />
+    <ClInclude Include="Rpc\Debugging\DebugActionCmd.hpp" />
+    <ClInclude Include="Rpc\Debugging\DebugManager\Breakpoint.hpp" />
+    <ClInclude Include="Rpc\Debugging\DebugManager\CallStack.hpp" />
+    <ClInclude Include="Rpc\Debugging\DebugManager\DebugInfo.hpp" />
+    <ClInclude Include="Rpc\Debugging\DebugManager\DebugManager.hpp" />
+    <ClInclude Include="Rpc\Debugging\DebugManager\LuaThread.hpp" />
+    <ClInclude Include="Rpc\Debugging\DebugManager\LuaVariable.hpp" />
+    <ClInclude Include="Rpc\Debugging\LuaError.hpp" />
+    <ClInclude Include="Rpc\Debugging\LuaOutput.hpp" />
+    <ClInclude Include="Rpc\Debugging\RpcCommand.hpp" />
+    <ClInclude Include="Rpc\Debugging\RunScriptInVM.hpp" />
+    <ClInclude Include="Rpc\Debugging\RunToLineCmd.hpp" />
+    <ClInclude Include="Rpc\Debugging\SetLuaVariable.hpp" />
+    <ClInclude Include="Rpc\Debugging\UnBreakAtLine.hpp" />
+    <ClInclude Include="Rpc\Debugging\UpdateBreakpoints.hpp" />
+    <ClInclude Include="Rpc\Debugging\UpdateDebugInfo.hpp" />
+    <ClInclude Include="Rpc\Debugging\UpdateTableDetails.hpp" />
+    <ClInclude Include="Rpc\RpcServer.hpp" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Components\Lua\lua\lua51.vcxproj">
+      <Project>{0a82cc4c-9a27-461c-8db0-a65ac6393748}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

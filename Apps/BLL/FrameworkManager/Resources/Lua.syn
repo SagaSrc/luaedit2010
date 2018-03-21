@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Language Name="Lua 5.1" Startblock="LUA Code">
+<FileTypes>
+	<FileType Extension=".lua" Name="Lua code file"/>
+</FileTypes>
+
+
+
+
+	<Block Name="LUA Code" Style="LUA Code" EscapeChar="" IsMultiline="true">
+		<Scope Start="do"  StartIsKeyword="true" End="end" EndIsKeyword="true"  Style="LUA Keyword" Text="..." CauseIndent="true"/>	
+		<Scope Start="function"  StartIsKeyword="true" End="end" EndIsKeyword="true"  Style="LUA Keyword" Text="..." CauseIndent="true"/>
+		<Scope Start="then" StartIsKeyword="true" End="end" EndIsKeyword="true"  Style="LUA Keyword" Text="..." CauseIndent="true"/>
+		
+		<!-- Keywords that can exist inside this block -->
+		<Keywords>
+			<PatternGroup Name="Keywords" Style="LUA Keyword" CaseSensitive="true">
+				<Patterns>
+				and
+break
+do 
+else 
+elseif 
+end 
+false 
+for 
+function 
+if 
+in
+local 
+nil 
+not 
+or
+repeat
+return 
+then 
+true 
+until 
+while 
+				</Patterns>
+			</PatternGroup>
+			<PatternGroup Name="Numbers" Style="LUA Number">
+				<Pattern Text="(0x[0-9,a-f,A-F]+)" IsComplex="true" />
+				<Pattern Text="([0-9]+)" IsComplex="true" />
+			</PatternGroup>
+		</Keywords>
+		<!-- Operators that can exist inside this block -->
+		<Operators>
+			<PatternGroup name="Operators" Style="LUA Operator">
+				<Pattern Text="." />
+				<Pattern Text="%" />
+				<Pattern Text=":" />
+				<Pattern Text="^" />
+				<Pattern Text="*" />
+				<Pattern Text="/" />
+				<Pattern Text="+" />
+				<Pattern Text="-" />
+				<Pattern Text="=" />
+				<Pattern Text="&gt;" />
+				<Pattern Text="&lt;" />
+        <Pattern Text="&gt;=" />
+        <Pattern Text="&lt;=" />
+			</PatternGroup>
+		</Operators>
+		<!-- Blocks that can exist inside this block -->
+		<ChildBlocks>
+			<Child Name="LUA Multiline Comment" />
+			<Child Name="LUA Singleline Comment" />
+			<Child Name="LUA String1" />
+      <Child Name="LUA String2" />
+      <Child Name="LUA Multiline String" />
+      <Child Name="LUA Code" />
+		</ChildBlocks>
+	</Block>
+	<Block Name="LUA Multiline Comment" Style="LUA Comment" EscapeChar="" IsMultiline="true">
+		<Scope Start="--[[" End="]]" Style="LUA Comment" Text="--[[...]]"/>
+		<Operators>
+			<PatternGroup name="URL" Style="LUA URL">
+				<Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+			</PatternGroup>
+		</Operators>
+	</Block>
+	<Block Name="LUA Singleline Comment" Style="LUA Comment" EscapeChar="" IsMultiline="false">
+		<Scope Start="--" End="" Style="LUA Comment" />
+    <Operators>
+      <PatternGroup name="URL" Style="LUA URL">
+        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+      </PatternGroup>
+    </Operators>
+	</Block>
+  <Block Name="LUA Multiline String" Style="LUA String" EscapeChar="" IsMultiline="true">
+    <Scope Start="[[" End="]]" Style="LUA String" />
+    <Operators>
+      <PatternGroup name="URL" Style="LUA URL">
+        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+      </PatternGroup>
+    </Operators>
+  </Block>
+  <Block Name="LUA String1" Style="LUA String" EscapeChar="" IsMultiline="false">
+    <Scope Start="&quot;" End="&quot;" Style="LUA String" />
+    <Operators>
+      <PatternGroup name="URL" Style="LUA URL">
+        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+      </PatternGroup>
+    </Operators>
+  </Block>
+	<Block Name="LUA String2" Style="LUA String" EscapeChar="" IsMultiline="false">
+		<Scope Start="'" End="'" Style="LUA String" />
+    <Operators>
+      <PatternGroup name="URL" Style="LUA URL">
+        <Pattern Text="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" IsComplex="true" />
+      </PatternGroup>
+    </Operators>
+	</Block>
+
+	<Style Name="LUA Code" ForeColor="" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="LUA Scope" ForeColor="" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="LUA Region" ForeColor="blue" BackColor="" Bold="true" Italic="false" Underline="false" />
+	<Style Name="LUA Comment" ForeColor="green" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="LUA String" ForeColor="darkred" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="LUA Number" ForeColor="magenta" BackColor="" Bold="true" Italic="false" Underline="false" />
+	<Style Name="LUA Operator" ForeColor="" BackColor="" Bold="false" Italic="false" Underline="false" />
+	<Style Name="LUA Keyword" ForeColor="blue" BackColor="" Bold="true" Italic="false" Underline="false" />
+	<Style Name="LUA URL" ForeColor="blue" BackColor="" Bold="false" Italic="false" Underline="true" />
+</Language>
