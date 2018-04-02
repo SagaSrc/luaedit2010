@@ -14,25 +14,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{5A63D442-A47C-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{5F5F5337-4C41-4384-B093-19F984BBA980}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkManager", "C:\Users\Administrator\Source\Repos\LuaEdit2010Source\Apps\BLL\FrameworkManager\FrameworkManager.csproj", "{CFA58506-139F-4DC2-A35C-EF0F3E3A84B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkManager", ".\BLL\FrameworkManager\FrameworkManager.csproj", "{CFA58506-139F-4DC2-A35C-EF0F3E3A84B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEditDebugger", "C:\Users\Administrator\Source\Repos\LuaEdit2010Source\Apps\BLL\RemoteDebug\LuaEditDebugger.csproj", "{280E9101-1627-46B1-A26A-0B09B2933163}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEditDebugger", ".\BLL\RemoteDebug\LuaEditDebugger.csproj", "{280E9101-1627-46B1-A26A-0B09B2933163}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFactory", "C:\Users\Administrator\Source\Repos\LuaEdit2010Source\Apps\DAL\DocumentFactory\DocumentFactory.csproj", "{7CD5D955-9096-4E82-9465-7827E427AB4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentFactory", ".\DAL\DocumentFactory\DocumentFactory.csproj", "{7CD5D955-9096-4E82-9465-7827E427AB4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEditDocuments", "C:\Users\Administrator\Source\Repos\LuaEdit2010Source\Apps\DAL\LuaEditDocuments\LuaEditDocuments.csproj", "{7D7FE0D5-7441-4A60-A75A-41CF368CB16C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEditDocuments", ".\DAL\LuaEditDocuments\LuaEditDocuments.csproj", "{7D7FE0D5-7441-4A60-A75A-41CF368CB16C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEditInterfaces", "C:\Users\Administrator\Source\Repos\LuaEdit2010Source\Apps\DAL\LuaEditInterfaces\LuaEditInterfaces.csproj", "{0B169010-A945-465E-BA31-CC50F58E5309}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEditInterfaces", ".\DAL\LuaEditInterfaces\LuaEditInterfaces.csproj", "{0B169010-A945-465E-BA31-CC50F58E5309}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEdit", "C:\Users\Administrator\Source\Repos\LuaEdit2010Source\Apps\UI\LuaEdit\LuaEdit.csproj", "{2D479CF5-C7DF-4CE9-B65C-00ECF57DA9B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEdit", ".\UI\LuaEdit\LuaEdit.csproj", "{2D479CF5-C7DF-4CE9-B65C-00ECF57DA9B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEditControls", "C:\Users\Administrator\Source\Repos\LuaEdit2010Source\Apps\UI\LuaEditControls\LuaEditControls.csproj", "{CFDD6ABF-286F-454D-93C4-95C08143E4EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEditControls", ".\UI\LuaEditControls\LuaEditControls.csproj", "{CFDD6ABF-286F-454D-93C4-95C08143E4EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rpc", "C:\Users\Administrator\Source\Repos\LuaEdit2010Source\Apps\Utilities\Rpc\Rpc.csproj", "{5A7ECA66-E2D3-43A1-8C88-074DAE417EDB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rpc", ".\Utilities\Rpc\Rpc.csproj", "{5A7ECA66-E2D3-43A1-8C88-074DAE417EDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEditWin32", "C:\Users\Administrator\Source\Repos\LuaEdit2010Source\Apps\Utilities\LuaEditWin32\LuaEditWin32.csproj", "{99E82EFE-83F9-421E-880B-AE94D54BB44C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEditWin32", ".\Utilities\LuaEditWin32\LuaEditWin32.csproj", "{99E82EFE-83F9-421E-880B-AE94D54BB44C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEditUtils", "C:\Users\Administrator\Source\Repos\LuaEdit2010Source\Apps\Utilities\LuaEditUtils\LuaEditUtils.csproj", "{80E45E78-33D7-49DC-863A-4C72AA60AB0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuaEditUtils", ".\Utilities\LuaEditUtils\LuaEditUtils.csproj", "{80E45E78-33D7-49DC-863A-4C72AA60AB0E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{3F2A9C9A-4AE9-474F-92ED-0F9D186225BA}"
 EndProject
